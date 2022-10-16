@@ -12,7 +12,7 @@
     <p>테스트 조건 : deep-shape</p>
     <p>
       사용자 정보 : {{ userInfo.nickName }} | {{ userInfo.gender }} |
-      {{ userInfo.age }}세 | {{ colorOne.answer }} : {{colorOne.input}} | {{ colorTwo.answer }} : {{colorTwo.input}}
+      {{ userInfo.age }}세 | {{ colorAnswerOne }} : {{colorInputOne}} | {{ colorAnswerTwo}} : {{colorInputTwo}}
     </p>
   </div>
   <table-result :result1="result1" :result2="result2" />
@@ -40,16 +40,20 @@ export default defineComponent({
     });
     const colorOne = computed(() => store.state.colorOne);
     console.log("colorOne",colorOne)
-    console.log("colorOne2",colorOne.answer)
-    console.log("colorOne3",colorOne.value.answer)
+    const colorAnswerOne = colorOne.value.answer
+    const colorInputOne = colorOne.value.input
     const colorTwo = computed(() => store.state.colorTwo);
+    const colorAnswerTwo = colorTwo.value.answer
+    const colorInputTwo = colorTwo.value.answer
 
     return {
       result1,
       result2,
       userInfo,
-      colorOne,
-      colorTwo,
+      colorAnswerOne,
+      colorInputOne,
+      colorAnswerTwo,
+      colorInputTwo
     };
   },
 });
