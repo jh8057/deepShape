@@ -105,6 +105,7 @@ export default defineComponent({
       if(window.confirm('지시에 따라 다음단계로 넘어가주세요.\n 다음 단계로 넘어갈까요?')){
         store.commit("setStep", 5);
       }
+    };
 
     onMounted(() => {
       // 재시작 방지
