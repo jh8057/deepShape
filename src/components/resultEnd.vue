@@ -39,6 +39,9 @@ export default defineComponent({
       };
     });
     const colorOne = computed(() => store.state.colorOne);
+    console.log("colorOne",colorOne)
+    console.log("colorOne2",colorOne.answer)
+    console.log("colorOne3",colorOne.value.answer)
     const colorTwo = computed(() => store.state.colorTwo);
 
     return {
