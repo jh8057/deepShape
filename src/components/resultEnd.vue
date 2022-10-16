@@ -39,7 +39,6 @@ export default defineComponent({
       };
     });
     const colorOne = computed(() => store.state.colorOne);
-    console.log("colorOne",colorOne)
     const colorAnswerOne = colorOne.value.answer
     const colorInputOne = colorOne.value.input
     const colorTwo = computed(() => store.state.colorTwo);
